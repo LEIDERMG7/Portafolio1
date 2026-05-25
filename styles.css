@@ -241,7 +241,7 @@ footer{background:#020617;padding:30px 6%;}
     .project-header,.project-desc,.project-visual{padding:24px 20px;}
     .skills-grid{grid-template-columns:1fr;}
 }
- .project-visual{
+.project-visual{
     padding:35px 40px;
     display:flex;
     align-items:center;
@@ -251,10 +251,13 @@ footer{background:#020617;padding:30px 6%;}
 .project-img{
     width:100%;
     max-width:420px;
+    height:260px; 
+    object-fit:cover; 
     border-radius:16px;
     border:1px solid rgba(56,189,248,.15);
     box-shadow:0 10px 30px rgba(0,0,0,.35);
     transition:transform .3s ease, box-shadow .3s ease;
+    display:block;
 }
 
 .project-img:hover{
