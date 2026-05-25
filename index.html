@@ -2,121 +2,492 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Leider Merchan | Portafolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leider Merchan | Desarrollador Backend</title>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
+ 
 
-<!-- NAV -->
-<nav class="navbar">
-    <h2>LM</h2>
-    <div>
-        <a href="#sobre">Sobre mí</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#skills">Habilidades</a>
+<nav class="navbar" id="navbar">
+    <a href="#inicio" class="logo">LM</a>
+    <div class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#sobre">Acerca de mí</a>
+        <a href="#cv">CV & Skills</a>
         <a href="#reflexion">Reflexión</a>
         <a href="#contacto">Contacto</a>
     </div>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menú">
+        <i class="fa-solid fa-bars"></i>
+    </button>
 </nav>
+ 
 
-<!-- HERO -->
-<section class="hero">
-    <div>
-        <h1>Hola, soy Leider 👋</h1>
-        <h2>Desarrollador en formación</h2>
-        <p>Enfocado en backend y desarrollo web</p>
-        <a href="#proyectos" class="btn">Ver proyectos</a>
+<section id="inicio" class="hero">
+    <div class="hero-text fade-in">
+        <p class="saludo">👋 Hola, soy</p>
+        <h1>Leider Merchan</h1>
+        <h2 class="typing-wrapper">
+            <span id="typing"></span><span class="cursor">|</span>
+        </h2>
+        <p class="descripcion">
+            Estudiante de Ingeniería Electrónica con enfoque en desarrollo backend.
+            Construyo sistemas reales, aprendo con proyectos y crezco con cada línea de código.
+        </p>
+        <div class="hero-buttons">
+            <a href="#portafolio" class="btn">
+                <i class="fa-solid fa-rocket"></i> Ver proyectos
+            </a>
+            <a href="CV - Leider Merchan Gutierrez (3) (1).pdf"btn-outline">
+                <i class="fa-solid fa-download"></i> Descargar CV
+            </a>
+        </div>
+        <div class="hero-contact-strip">
+            <a href="mailto:leider.merchangu7@gmail.com">
+                <i class="fa-solid fa-envelope"></i> leider.merchangu7@gmail.com
+            </a>
+            <a href="https://github.com/LEIDERMG7" target="_blank">
+                <i class="fa-brands fa-github"></i> LEIDERMG7
+            </a>
+            <a href="https://www.linkedin.com/in/leider-merchan-gutierrez-fullstack-java/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
+    </div>
+    <div class="hero-img fade-in">
+        <div class="img-ring">
+            <img src="WhatsApp Image 2026-05-24 at 6.56.36 PM.jpeg" alt="Leider Merchan">
+        </div>
+        <div class="hero-badge">
+            <i class="fa-solid fa-code"></i> Backend Dev
+        </div>
     </div>
 </section>
+ 
 
-<!-- SOBRE MI -->
-<section id="sobre" class="section">
-    <h2>Sobre mí</h2>
-    <p>
-        Soy estudiante de Ingeniería Electrónica con interés en el desarrollo de software.
-        He trabajado en proyectos web interactivos y sistemas con programación orientada a objetos,
-        fortaleciendo mi lógica y habilidades técnicas.
-    </p>
+<section id="portafolio" class="section">
+    <p class="section-label">Lo que he construido</p>
+    <h2 class="titulo">Portafolio</h2>
+ 
+
+    <article class="project-card fade-in" id="proj-clinica">
+        <div class="project-header clinica-header">
+            <div class="project-badge">Hackathon Generation Colombia · Java OOP</div>
+            <h3>BackClinicaApp</h3>
+            <p class="project-tagline">Sistema de gestión hospitalaria </p>
+            <div class="project-links">
+                <a href="https://github.com/CamiGit/BackClinicaApp" target="_blank" class="proj-btn">
+                    <i class="fa-brands fa-github"></i> Ver código
+                </a>
+            </div>
+        </div>
+        <div class="project-body">
+            <div class="project-desc">
+                <div class="desc-block">
+                    <h4><i class="fa-solid fa-bullseye"></i> El reto</h4>
+                    <p>Construir desde cero un sistema de gestión de turnos médicos en Java puro — sin frameworks — que manejara pacientes, médicos y turnos en memoria, con persistencia automática en archivos CSV entre ejecuciones.</p>
+                </div>
+                <div class="desc-block">
+                    <h4><i class="fa-solid fa-person-digging"></i> Mi rol</h4>
+                    <p>Diseñé e implementé las clases del modelo (<code>Paciente</code>, <code>Medico</code>, <code>Turno</code>), las interfaces <code>Registrable</code> y <code>Consultable</code>, y la lógica de negocio en <code>ClinicaService</code> — validaciones, detección de duplicados y conflictos de agenda incluidos.</p>
+                </div>
+                <div class="desc-block">
+                    <h4><i class="fa-solid fa-trophy"></i> Lo más destacado</h4>
+                    <p>Aplicar los cuatro pilares de la POO en un sistema real con restricciones de tiempo. El mayor aprendizaje: entender por qué <code>equals()</code> importa — sin sobrescribirlo, Java comparaba direcciones de memoria y los duplicados pasaban sin detectarse.</p>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-pill java">Java</span>
+                    <span class="tech-pill tool">POO</span>
+                    <span class="tech-pill tool">Consola</span>
+                    <span class="tech-pill tool">Interfaces</span>
+                    <span class="tech-pill tool">Enums</span>
+                    <span class="tech-pill tool">Git</span>
+                </div>
+            </div>
+                <div class="project-visual">
+                    <img src="backclinicaapp.png" alt="BackClinicaApp" class="project-img">
+                </div>
+        </div>
+    </article>
+ 
+
+    <article class="project-card fade-in" id="proj-ruta">
+        <div class="project-header ruta-header">
+            <div class="project-badge">Proyecto en equipo · Full Stack</div>
+            <h3>RutaSalvaje</h3>
+            <p class="project-tagline">Plataforma de aventuras y turismo de naturaleza</p>
+            <div class="project-links">
+                <a href="https://github.com/JuranyR/RutaSalvaje" target="_blank" class="proj-btn">
+                    <i class="fa-brands fa-github"></i> Ver código
+                </a>
+            </div>
+        </div>
+        <div class="project-body">
+            <div class="project-desc">
+                <div class="desc-block">
+                    <h4><i class="fa-solid fa-bullseye"></i> El reto</h4>
+                    <p>Crear una plataforma donde guías y aventureros pueden publicar, buscar y reservar rutas de senderismo y ecoturismo, con sistema de reseñas y filtros por dificultad y ubicación.</p>
+                </div>
+                <div class="desc-block">
+                    <h4><i class="fa-solid fa-person-digging"></i> Mi rol</h4>
+                    <p>Trabajé en la lógica del backend para la gestión de rutas y reservas, y apoyé en el diseño de la estructura de la base de datos para almacenar rutas con coordenadas y características de terreno.</p>
+                </div>
+                <div class="desc-block">
+                    <h4><i class="fa-solid fa-trophy"></i> Lo más destacado</h4>
+                    <p>El mayor aprendizaje fue coordinar trabajo en equipo con Git: manejar ramas, resolver conflictos de merge y mantener el código limpio bajo presión de tiempo fue un desafío real que consolidó habilidades clave.</p>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-pill spring">Node.js</span>
+                    <span class="tech-pill tool">HTML/CSS</span>
+                    <span class="tech-pill tool">JavaScript</span>
+                    <span class="tech-pill tool">GitHub</span>
+                </div>
+            </div>
+            <div class="project-visual">
+                <img src="rutasalvake.png" alt="BackClinicaApp" class="project-img">
+            </div>
+        </div>
+    </article>
+ 
+
+    <article class="project-card fade-in" id="proj-tienda">
+        <div class="project-header tienda-header">
+            <div class="project-badge">Proyecto individual · Backend </div>
+            <h3>ProyectoTienda</h3>
+            <p class="project-tagline">Sistema de inventario y ventas con Programación Orientada a Objetos</p>
+            <div class="project-links">
+                <a href="https://github.com/LEIDERMG7/ProyectoTienda" target="_blank" class="proj-btn">
+                    <i class="fa-brands fa-github"></i> Ver código
+                </a>
+            </div>
+        </div>
+        <div class="project-body">
+            <div class="project-desc">
+                <div class="desc-block">
+                    <h4><i class="fa-solid fa-bullseye"></i> El reto</h4>
+                    <p>Construir una API REST para gestionar vuelos, pasajeros y reservas, implementando operaciones CRUD completas, validaciones de datos, relaciones entre entidades y manejo correcto de respuestas HTTP. El sistema debía garantizar integridad en la información, evitar errores comunes en las reservas y documentar automáticamente los endpoints con Swagger.</p>
+                </div>
+                <div class="desc-block">
+                    <h4><i class="fa-solid fa-person-digging"></i> Mi rol</h4>
+                    <p>Participé en el desarrollo de la lógica backend utilizando Spring Boot, creando controllers, services y repositories para las entidades principales.</p>
+                </div>
+                <div class="desc-block">
+                    <h4><i class="fa-solid fa-trophy"></i> Lo más destacado</h4>
+                    <p>El mayor aprendizaje fue entender cómo estructurar una API backend de forma profesional: desde el manejo de validaciones y códigos HTTP hasta la documentación automática con Swagger. Trabajar con relaciones entre entidades y DTOs me permitió comprender cómo diseñar servicios más limpios, escalables y preparados para aplicaciones reales.</p>
+                </div>
+                <div class="tech-stack"
+                    <span class="tech-pill tool">Java</span>
+                    <span class="tech-pill tool">Postgre</span>
+                    <span class="tech-pill tool">Postman</span>
+                    <span class="tech-pill tool">GitHub</span>
+                </div>
+                </div>
+                <div class="project-visual">
+                    <img src="tienda.jpeg" alt="BackClinicaApp" class="project-img">
+                </div>
+        </div>
+    </article>
+ 
 </section>
+ 
 
-<!-- PROYECTOS -->
-<section id="proyectos" class="section">
-    <h2>Proyectos</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>ABC Challenge</h3>
-            <p>Aplicación interactiva para enseñar el abecedario con tarjetas dinámicas.</p>
-            <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
-            <div class="botones">
-                <a href="#" class="btn-small">Ver proyecto</a>
-                <a href="#" class="btn-small outline">GitHub</a>
+<section id="sobre" class="section section-alt">
+    <p class="section-label">Mi historia</p>
+    <h2 class="titulo">Acerca de mí</h2>
+ 
+    <div class="about-grid">
+        <div class="about-photo fade-in">
+            <img src="WhatsApp Image 2026-05-24 at 6.56.36 PM.jpeg" alt="Leider Merchan">
+            <div class="about-name-card">
+                <strong>Leider Merchan</strong>
+                <span>Bogotá, Colombia 🇨🇴</span>
             </div>
         </div>
-
-        <div class="card">
-            <h3>Task Manager</h3>
-            <p>Gestor de tareas con estados, categorías y contador en tiempo real.</p>
-            <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
-            <div class="botones">
-                <a href="#" class="btn-small">Ver proyecto</a>
-                <a href="#" class="btn-small outline">GitHub</a>
+        <div class="about-text fade-in">
+            <p class="about-intro">
+                Soy estudiante de <strong>Ingeniería Electrónica</strong> que encontró en el código una segunda vocación.
+                Lo que empezó como curiosidad por entender cómo funcionan las apps se convirtió en una pasión
+                por construir sistemas robustos desde la lógica del backend.
+            </p>
+            <p>
+                Me formé con una mentalidad de resolución de problemas: antes de escribir una línea de código,
+                entiendo el problema. Me apasionan los sistemas bien diseñados, la programación orientada a objetos
+                y construir APIs que otros puedan usar con facilidad.
+            </p>
+            <p>
+                Fuera del código, soy alguien curioso por la electrónica, los sistemas embebidos y la intersección
+                entre hardware y software — una perspectiva que pocos desarrolladores tienen y que me diferencia.
+            </p>
+            <div class="about-values">
+                <div class="value-item">
+                    <i class="fa-solid fa-code-branch"></i>
+                    <span>Código limpio sobre código rápido</span>
+                </div>
+                <div class="value-item">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Aprender en equipo, crecer individual</span>
+                </div>
+                <div class="value-item">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span>Electrónica + Software = perspectiva única</span>
+                </div>
             </div>
         </div>
-
-        <div class="card">
-            <h3>Sistema de Tienda</h3>
-            <p>Sistema con clases, herencia y módulos en Node.js.</p>
-            <p><strong>Tecnologías:</strong> JavaScript, Node.js</p>
-            <div class="botones">
-                <a href="#" class="btn-small">Ver código</a>
-                <a href="#" class="btn-small outline">GitHub</a>
-            </div>
-        </div>
-
     </div>
 </section>
+ 
 
-<!-- SKILLS -->
-<section id="skills" class="section">
-    <h2>Habilidades</h2>
+<section id="cv" class="section">
+    <p class="section-label">Mi trayectoria</p>
+    <h2 class="titulo">CV & Skills</h2>
+ 
+    <div class="cv-grid">
 
-    <div class="skills">
-        <p>JavaScript</p>
-        <div class="bar"><div style="width:20%"></div></div>
+        <div class="cv-column fade-in">
+            <h3 class="cv-col-title"><i class="fa-solid fa-graduation-cap"></i> Educación</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <span class="tl-year">2024</span>
+                        <h4>Tecnologia en Electronica Industrial</h4>
+                        <p>Universidad ECCI</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <span class="tl-year">2026</span>
+                        <h4>Bootcamp Desarrollo Full stack</h4>
+                        <p>Formación intensiva en Java, Spring Boot, bases de datos y APIs REST</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <span class="tl-year">2026 - 2</span>
+                        <h4>Ingenieria Electronica</h4>
+                        <p>Universidad ECCI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
 
-        <p>Python</p>
-        <div class="bar"><div style="width:50%"></div></div>
+        <div class="cv-column fade-in">
+            <h3 class="cv-col-title"><i class="fa-solid fa-star"></i> Logros destacados</h3>
+            <div class="logros-list">
+                <div class="logro-item">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <p>Desarrollé un backend funcional con Spring Boot para un sistema clínico en equipo</p>
+                </div>
+                <div class="logro-item">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <p>Participé en el desarrollo de una plataforma de turismo de aventura completa</p>
+                </div>
+                <div class="logro-item">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <p>Apliqué los 4 pilares de la POO en un proyecto individual de sistema de tienda</p>
+                </div>
+                <div class="logro-item">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <p>Trabajo colaborativo con GitHub: ramas, pull requests y gestión de conflictos</p>
+                </div>
+                <div class="logro-item">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <p>Portafolio web profesional publicado con GitHub Pages</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
 
-        <p>HTML & CSS</p>
-        <div class="bar"><div style="width:20%"></div></div>
+    <div class="skills-section fade-in">
+        <h3 class="cv-col-title" style="margin-bottom:40px"><i class="fa-solid fa-layer-group"></i> Habilidades técnicas</h3>
+        <div class="skills-grid">
+ 
+            <div class="skill-group">
+                <h4>Backend</h4>
+                <div class="skill"><div class="skill-header"><p>Java</p><p class="skill-pct">50%</p></div><div class="bar"><div class="bar-fill" data-width="60%"></div></div></div>
+                <div class="skill"><div class="skill-header"><p>Node.js</p><p class="skill-pct">40%</p></div><div class="bar"><div class="bar-fill" data-width="55%"></div></div></div>
+                <div class="skill"><div class="skill-header"><p>Spring Boot</p><p class="skill-pct">30%</p></div><div class="bar"><div class="bar-fill" data-width="40%"></div></div></div>
+                <div class="skill"><div class="skill-header"><p>APIs REST</p><p class="skill-pct">30%</p></div><div class="bar"><div class="bar-fill" data-width="55%"></div></div></div>
+            </div>
+ 
+            <div class="skill-group">
+                <h4>Frontend & DB</h4>
+                <div class="skill"><div class="skill-header"><p>HTML</p><p class="skill-pct">60%</p></div><div class="bar"><div class="bar-fill" data-width="80%"></div></div></div>
+                <div class="skill"><div class="skill-header"><p>CSS</p><p class="skill-pct">40%</p></div><div class="bar"><div class="bar-fill" data-width="70%"></div></div></div>
+                <div class="skill"><div class="skill-header"><p>JavaScript</p><p class="skill-pct">45%</p></div><div class="bar"><div class="bar-fill" data-width="55%"></div></div></div>
+                <div class="skill"><div class="skill-header"><p>Postgre</p><p class="skill-pct">50%</p></div><div class="bar"><div class="bar-fill" data-width="50%"></div></div></div>
+            </div>
+ 
+            <div class="skill-group">
+                <h4>Herramientas</h4>
+                <div class="skill"><div class="skill-header"><p>Git & GitHub</p><p class="skill-pct">65%</p></div><div class="bar"><div class="bar-fill" data-width="65%"></div></div></div>
+                <div class="skill"><div class="skill-header"><p>Python</p><p class="skill-pct">40%</p></div><div class="bar"><div class="bar-fill" data-width="60%"></div></div></div>
+                <div class="skill"><div class="skill-header"><p>POO / Patrones</p><p class="skill-pct">55%</p></div><div class="bar"><div class="bar-fill" data-width="55%"></div></div></div>
+                <div class="skill"><div class="skill-header"><p>Trabajo en equipo</p><p class="skill-pct">60%</p></div><div class="bar"><div class="bar-fill" data-width="75%"></div></div></div>
+            </div>
+ 
+        </div>
+    </div>
+ 
+    <div class="cv-download fade-in">
+        <a href="CV - Leider Merchan Gutierrez (3) (1).pdf" download class="btn">
+            <i class="fa-solid fa-file-pdf"></i> Descargar CV completo en PDF
+        </a>
     </div>
 </section>
+ 
 
-<!-- REFLEXIÓN -->
-<section id="reflexion" class="section">
-    <h2>Reflexión</h2>
-    <p>
-        Durante mi proceso como desarrollador, he aprendido a construir aplicaciones web
-        funcionales y a aplicar programación orientada a objetos.
-    </p>
-    <p>
-        He fortalecido mi lógica, el manejo del DOM y la estructura del código. 
-        Como meta, busco seguir creciendo en backend con Java y convertirme en desarrollador full stack.
-    </p>
+<section id="reflexion" class="section section-alt">
+    <p class="section-label">Introspección</p>
+    <h2 class="titulo">Reflexión de mi camino como desarrollador</h2>
+ 
+    <div class="reflexion-container fade-in">
+ 
+        <div class="reflexion-block">
+            <div class="refl-icon"><i class="fa-solid fa-seedling"></i></div>
+            <h3>De dónde vengo</h3>
+            <p>
+                Hace poco más de un año, el backend era para mí una caja negra. Sabía que existía, que "algo
+                hacía por detrás", pero no tenía idea de cómo funcionaba. Mis primeros proyectos en HTML y CSS
+                fueron torpes pero honestos — y ese entusiasmo fue el combustible para seguir.
+            </p>
+        </div>
+ 
+        <div class="reflexion-block">
+            <div class="refl-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3>El punto de quiebre</h3>
+            <p>
+                Cuando implementé mis primeras clases en Java y vi cómo un objeto <code>Medico</code> podía tener
+                su propia lógica, sus propios datos y comunicarse con un objeto <code>Cita</code> de manera
+                ordenada, algo hizo clic. La POO pasó de ser un concepto del parcial a ser mi forma de pensar
+                cuando enfrento un problema.
+            </p>
+        </div>
+ 
+        <div class="reflexion-block">
+            <div class="refl-icon"><i class="fa-solid fa-users"></i></div>
+            <h3>Lo que los proyectos en equipo me enseñaron</h3>
+            <p>
+                En RutaSalvaje y BackClinicaApp aprendí que el código es solo el 50% del trabajo. El otro 50%
+                es comunicar, acordar, revisar y adaptarse. Un merge conflict a las 11pm antes de la entrega
+                enseña más sobre trabajo en equipo que cualquier teoría.
+            </p>
+        </div>
+ 
+        <div class="reflexion-block">
+            <div class="refl-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <h3>Metas a corto plazo (6 meses)</h3>
+            <ul>
+                <li>Dominar Spring Boot con seguridad JWT y manejo de roles</li>
+                <li>Publicar un proyecto personal desplegado y funcional en producción</li>
+                <li>Completar el módulo de bases de datos avanzado (índices, joins complejos)</li>
+                <li>Conseguir mi primera experiencia laboral o pasantía en desarrollo</li>
+            </ul>
+        </div>
+ 
+        <div class="reflexion-block">
+            <div class="refl-icon"><i class="fa-solid fa-flag-checkered"></i></div>
+            <h3>Metas a largo plazo (2 años)</h3>
+            <ul>
+                <li>Trabajar como backend developer junior en una empresa de tecnología</li>
+                <li>Explorar la intersección entre IoT y desarrollo de software (mi ventaja como ingeniero electrónico)</li>
+                <li>Contribuir a proyectos open source y mentorear a quien empieza como yo empecé</li>
+                <li>Obtener una certificación en Cloud (AWS o GCP)</li>
+            </ul>
+        </div>
+ 
+        <div class="reflexion-block reflexion-cierre">
+            <blockquote>
+                "No busco ser el mejor programador del mundo. Busco ser mejor que el Leider de hace seis meses.
+                Hasta ahora, eso siempre ha funcionado."
+            </blockquote>
+            <p class="firma">— Leider Merchan, Mayo 2026</p>
+        </div>
+ 
+    </div>
 </section>
+ 
 
-<!-- CONTACTO -->
-<section id="contacto" class="section contacto">
-    <h2>Contacto</h2>
-    <p>Email: leider.merchangu7@gmail.com</p>
+<section id="contacto" class="section">
+    <p class="section-label">Hablemos</p>
+    <h2 class="titulo">Contacto</h2>
+    <p class="contacto-desc">¿Tienes un proyecto, una oportunidad o simplemente quieres conectar? Escríbeme.</p>
+ 
+    <div class="contacto-grid">
+        <div class="contacto-info fade-in">
+            <a href="mailto:leider.merchangu7@gmail.com" class="info-card">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <strong>Email</strong>
+                    <span>leider.merchangu7@gmail.com</span>
+                </div>
+            </a>
+            <a href="https://github.com/LEIDERMG7" target="_blank" class="info-card">
+                <i class="fa-brands fa-github"></i>
+                <div>
+                    <strong>GitHub</strong>
+                    <span>github.com/LEIDERMG7</span>
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/leider-merchan-gutierrez-fullstack-java/" target="_blank" class="info-card">
+                <i class="fa-brands fa-linkedin"></i>
+                <div>
+                    <strong>LinkedIn</strong>
+                    <span>linkedin.com/in/leider-merchan</span>
+                </div>
+            </a></div>
+ 
+        <form class="contacto-form fade-in" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="tu@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" placeholder="¿De qué quieres hablar?">
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto u oportunidad..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-full">
+                <i class="fa-solid fa-paper-plane"></i> Enviar mensaje
+            </button>
+            <p id="form-feedback" class="form-feedback"></p>
+        </form>
+    </div>
 </section>
+ 
 
 <footer>
-    <p>© 2026 Leider Merchan</p>
+    <div class="footer-inner">
+        <a href="#inicio" class="logo">LM</a>
+        <p>Hecho con <i class="fa-solid fa-heart" style="color:#38bdf8"></i> y mucho café · Leider Merchan © 2026</p>
+        <div class="footer-links">
+            <a href="https://github.com/LEIDERMG7" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/leider-merchan-gutierrez-fullstack-java/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:leider.merchangu7@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>
 </footer>
+ 
 
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Volver arriba">
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
+ 
+ 
+<script src="script.js" defer></script>
 </body>
 </html>
